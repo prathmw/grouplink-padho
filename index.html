@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
+  <title>Join Padho India</title>
 
   <style>
-    /* Hide on non-mobile screens */
+    /* Hide on non-mobile screens (optional) */
     @media screen and (min-width: 768px) {
       body {
         display: none;
@@ -21,11 +21,13 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      font-family: Arial, sans-serif;
     }
 
     .container {
       text-align: center;
       animation: fadeIn 1.2s ease-in-out;
+      padding: 20px;
     }
 
     @keyframes fadeIn {
@@ -95,13 +97,37 @@
         transform: translateY(0%) rotate(0deg);
       }
     }
+
+    /* Button */
+    .join-btn {
+      display: none;
+      margin-top: 20px;
+      padding: 14px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: #25D366;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .join-btn:hover {
+      transform: scale(1.05);
+    }
   </style>
 
   <script>
+    function redirectNow() {
+      window.location.href = "https://chat.whatsapp.com/Kj4RvDzOKnsIlQ59atbCRX";
+    }
+
     window.onload = function () {
       setTimeout(() => {
-        window.location.href = "https://chat.whatsapp.com/Kj4RvDzOKnsIlQ59atbCRX";
-      }, 1200); // small delay for animation
+        document.querySelector(".loader").style.display = "none";
+        document.getElementById("redirectBtn").style.display = "inline-block";
+      }, 1200);
     };
   </script>
 </head>
@@ -116,10 +142,14 @@
 
     <div class="message">
       <strong>Welcome to Padho India.</strong><br>
-      You will be redirected to the session.
+      Tap below to join the WhatsApp session.
     </div>
 
     <div class="loader"></div>
+
+    <button id="redirectBtn" class="join-btn" onclick="redirectNow()">
+      Join WhatsApp Group
+    </button>
   </div>
 </body>
 </html>
