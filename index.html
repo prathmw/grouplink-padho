@@ -13,37 +13,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   font-family: Arial, sans-serif;
 }
 
 .container {
   text-align: center;
-  animation: fadeIn 1.2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-.image {
-  width: 150px;
-  height: 150px;
-}
-
-.message {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  color: #333;
 }
 </style>
 
 <script>
+function redirectToWhatsApp() {
+    const timestamp = new Date().getTime();
+    const message = "Hello, I want to join the group. Ref:" + timestamp;
+    const url = "https://wa.me/919270255633?text=" + encodeURIComponent(message);
+    window.location.href = url;
+}
+
 window.onload = function () {
-  setTimeout(() => {
-    window.location.href = "https://wa.me/919270255633?text=Group%20Link";
-  }, 1200);
+    setTimeout(redirectToWhatsApp, 1000);
 };
 </script>
 
@@ -51,16 +38,8 @@ window.onload = function () {
 
 <body>
 <div class="container">
-  <img
-    src="https://d3jt6ku4g6z5l8.cloudfront.net/IMAGE/673c941b7b4ac10beb8a8360/6100612_excited.png"
-    alt="Excited Icon"
-    class="image"
-  />
-
-  <div class="message">
-    <strong>Welcome to Padho India.</strong><br>
-    Redirecting you to WhatsApp...
-  </div>
+  <h2>Welcome to Padho India</h2>
+  <p>Redirecting you to WhatsApp...</p>
 </div>
 </body>
 </html>
