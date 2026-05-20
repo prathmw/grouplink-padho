@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirecting...</title>
+<title>Padho India - WhatsApp Group</title>
 
 <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   background-color: #f9f9f9;
   height: 100vh;
@@ -18,31 +20,53 @@ body {
 
 .container {
   text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  margin-bottom: 24px;
+  color: #666;
+  font-size: 1rem;
+}
+
+.join-btn {
+  display: inline-block;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #25D366;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.join-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.join-btn:active {
+  transform: scale(0.97);
 }
 </style>
-
-<script>
-function redirectToWhatsApp() {
-    const message = "Hello, I want to join the group.";
-    const unique = new Date().getTime(); // hidden uniqueness
-    const url = "https://wa.me/919270255633?text=" 
-                + encodeURIComponent(message)
-                + "&u=" + unique;
-
-    window.location.href = url;
-}
-
-window.onload = function () {
-    setTimeout(redirectToWhatsApp, 1000);
-};
-</script>
-
 </head>
 
 <body>
 <div class="container">
   <h2>Welcome to Padho India</h2>
-  <p>Redirecting you to WhatsApp...</p>
+  <p>Tap the button below to join our WhatsApp group</p>
+  <a class="join-btn" href="https://chat.whatsapp.com/Kd0x1hwK9sBEbd9yrTOvxx" target="_blank" rel="noopener noreferrer">
+    Join WhatsApp Group
+  </a>
 </div>
 </body>
 </html>
